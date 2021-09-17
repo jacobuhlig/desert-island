@@ -28,7 +28,6 @@ public class Main {
 
         int inputNumberOfParticipants = scan.nextInt();
 
-        //boolean repeatPrompt = true;
 
         for (int i = 0; i < inputNumberOfParticipants; i++) {
 
@@ -49,14 +48,15 @@ public class Main {
             }
         }
 
+
         String mostPopularItem = choiceOfItem[getIndexOfMostPopularItem(choiceOfItemStatistics)];
         int timesChosen = choiceOfItemStatistics[getIndexOfMostPopularItem(choiceOfItemStatistics)];
 
-        System.out.print("\n[");
+        System.out.print("\n\n[");
         for (int i = 0; i < 9; i++) {
             System.out.print(choiceOfItemStatistics[i] + ", ");
         }
-        System.out.print(choiceOfItemStatistics[9] + "]");
+        System.out.print(choiceOfItemStatistics[choiceOfItemStatistics.length - 1] + "]");
 
         System.out.println("\nMost popular item:\t\t\t" + mostPopularItem);
         System.out.println("Number of times chosen:\t\t" + timesChosen);
